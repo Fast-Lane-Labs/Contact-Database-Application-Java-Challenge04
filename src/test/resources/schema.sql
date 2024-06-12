@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS contact (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name VARCHAR(255),
+    last_name VARCHAR(255),
+    email TEXT NOT NULL
+);

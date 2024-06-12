@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bulk Import | Fast Lane</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+      </head>
+      <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container">
+
+            <img src="https://labs.fastlane-israel.com/static/assets/img/brand/flane-white.png" alt="Fast Lane Logo" width="166" height="30">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mt-2 mb-lg-0 ms-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="https://flane.co.il" target="_blank">More Courses</a>
+                  </li>
+              </ul>
+              <!--Login Bar-->
+            </div>
+          </div>
+        </nav>
+    
+        <div class="container my-5">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Bulk Import</li>
+                </ol>
+              </nav>
+              <hr class="col-3 my-4">
+          <h1>Upload Contact File</h1>
+          <hr class="col-12 my-4">
+          <div class="col-lg-8 px-0 mt-4">
+
+    
+    
+            <form method="POST" action="/contacts/import" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="file" class="form-label">Upload CSV file with the following columns: firstName, lastName, email
+                    </label>
+                    <input type="file" class="form-control" id="file" name="file" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+
+            
+    
+          </div>
+        </div>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+      </body>
+    </html>
